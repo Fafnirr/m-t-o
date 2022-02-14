@@ -1,6 +1,6 @@
 setInterval(function(){
-  let poste = document.querySelector('.poste');
   let ville = "Lyon";
+  let weather = document.querySelector('.weather');
   let selectville = document.querySelector('.ville');
 
   let ajax = new XMLHttpRequest;
@@ -11,7 +11,7 @@ setInterval(function(){
       if(ajax.readyState === ajax.DONE){
           // on fait ce qu'on veut faire avec notre reponse
           selectville.innerHTML = ville;
-          poste.innerHTML = ajax.response.main.temp + '°C';
+          weather.innerHTML = ajax.response.main.temp + 'C';
       }
   })
   // On prepare la requete ajax en indiquant la methode http et l'url de la ressource à requeter
